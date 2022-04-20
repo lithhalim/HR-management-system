@@ -1,0 +1,35 @@
+*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;text-decoration: none;}
+header {
+    height: 10vh;text-transform: uppercase;display: flex;
+    justify-content: space-between;align-items: center;
+    padding: 0px 150px;background-color: silver;
+}
+header .logo {
+    letter-spacing: 2px;font-weight: bold;
+}
+header ul {
+    display: flex;align-items: center;
+}
+header ul li {
+    padding: 0px 50px;
+}
+header ul li a {
+    color: black; font-weight: bold;
+}
+main {
+    height: 90vh;
+}
+footer {
+    display: flex;align-items: center;justify-content: center;
+    padding: 20px 0px;height: 10vh;
+    background-color: silver;
+}
+table,th,tr,td {
+    border: 1px solid black;border-collapse: collapse;
+    padding: 10px 30px;
+}
+table {
+    margin-left: auto;margin-right: auto;
+    margin-top: 50px;
+}
+
