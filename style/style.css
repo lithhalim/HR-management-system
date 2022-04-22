@@ -1,8 +1,13 @@
-*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;text-decoration: none;}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{margin: 0;padding: 0;list-style: none;box-sizing: border-box;text-decoration: none;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 header {
     height: 10vh;text-transform: uppercase;display: flex;
     justify-content: space-between;align-items: center;
-    padding: 0px 150px;background-color: silver;
+    padding: 0px 150px;background-color: #22577E;color: #FAFFAF;
+}
+body {
+    background-color: #22577E;
 }
 header .logo {
     letter-spacing: 2px;font-weight: bold;
@@ -14,22 +19,44 @@ header ul li {
     padding: 0px 50px;
 }
 header ul li a {
-    color: black; font-weight: bold;
-}
-main {
-    height: 90vh;
+    color: #FAFFAF; font-weight: bold;
 }
 footer {
     display: flex;align-items: center;justify-content: center;
     padding: 20px 0px;height: 10vh;
-    background-color: silver;
-}
-table,th,tr,td {
-    border: 1px solid black;border-collapse: collapse;
-    padding: 10px 30px;
-}
-table {
-    margin-left: auto;margin-right: auto;
-    margin-top: 50px;
+    background-color: #FAFFAF;
 }
 
+
+form {
+    margin-top: 100px;
+    width: 400px;margin-left: auto;margin-right: auto;
+    margin-bottom: 100px;text-align: center;
+}
+form input,select {
+    width: 100%;height: 30px;margin-top: 10px;text-align: center;
+    font-weight: bold;text-transform: capitalize;
+
+}
+
+.container {
+    display: grid;grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 60px;padding: 50px 150px;text-align: center;
+    background-image: url("../assest/backgrounf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .icon {
+    padding: 10px;background-color: #95D1CC;border-radius: 20px;color: #FAFFAF;
+    text-transform: capitalize;
+}
+.container .icon p {
+    padding: 7px 0px;
+}
+.container .icon img {
+    width: 200px;height: 250px;
+}
+.container .icon p span {
+    font-weight: bold;
+}
