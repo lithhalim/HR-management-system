@@ -60,3 +60,21 @@ form input,select {
 .container .icon p span {
     font-weight: bold;
 }
+
+
+
+/* acconting */
+
+table,th,tr,td{
+    border:2px solid black;
+    border-collapse: collapse;
+    padding: 10px 30px;
+    text-align: center;
+    color: #FAFFAF;
+    text-transform: capitalize;
+}
+table {
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
