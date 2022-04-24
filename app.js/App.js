@@ -3,6 +3,10 @@
 'use strict'
 ///////////////////Define The Element Constracture///////////////////////////////////////////
 let array=[]
+let addedArray=[]
+
+
+
 function Employee(EmployeeID,FullName,Department,Level,ImageURL,Salary){
 this.EmployeeID=EmployeeID,
 this.FullName=FullName,
@@ -13,6 +17,32 @@ this.Salary=Salary
 this.selaryNew
 array.push(this)
 }
+
+
+
+//////////check the local storage
+if(window.localStorage.added){
+  let z=JSON.parse(window.localStorage.added)
+  let icon=document.querySelector(".container")
+
+  console.log(z)
+  z.forEach(({Department,EmployeeID,FullName,ImageURL,Level,selaryNew})=>{
+
+    icon.innerHTML+=`
+   <div class="icon">
+    <img src=${ImageURL} alt="NoImage">
+    <p><span>Name</span>:${FullName}-ID:${EmployeeID}</p>
+    <p><span>Department</span>:${Department}-level:${Level}</p>
+    <p>${selaryNew}</p>
+  </div>`
+ 
+  })
+
+
+
+
+}
+
 
 
 
@@ -82,6 +112,24 @@ function addEvent(){
    let userLevel=form.Level.value
    let userImage=form.Image.value
    neSelary(userLevel)
+   addedArray.push({
+    FullName:userName,
+     EmployeeID:userId,
+     Department:userDepartment,
+     Level:userLevel,
+     ImageURL:userImage,
+     selaryNew:newSelary
+   })
+
+
+
+
+   function addLocal(){
+    window.localStorage.added=JSON.stringify(addedArray)
+  }addLocal()
+  
+  
+  
 
 
    //add to icon
@@ -119,6 +167,8 @@ const neSelary=function(userLevel) {
 
 
  
-
+function mainLocal(){
+  window.localStorage.main=JSON.stringify(array)
+}mainLocal()
 
 
